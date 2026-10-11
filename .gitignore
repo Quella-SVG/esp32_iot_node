@@ -4,3 +4,6 @@ build/
 # sdkconfig is generated from sdkconfig.defaults
 sdkconfig
 sdkconfig.old
+
+# Secrets: WiFi / OneNET credentials, keep local only
+components/app_config/app_config_private.h

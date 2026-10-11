@@ -1,0 +1,15 @@
+#pragma once
+
+/* ============================================================
+ * 私有配置模板：复制本文件为 app_config_private.h 并填入真实值
+ * app_config_private.h 已被 .gitignore 忽略，不会被提交
+ * ============================================================ */
+
+/* ---------- WiFi ---------- */
+#define CFG_WIFI_SSID           "your_wifi_ssid"
+#define CFG_WIFI_PASS           "your_wifi_password"
+
+/* ---------- OneNET 平台身份 ---------- */
+#define CFG_ONENET_PRODUCT_ID   "your_product_id"
+#define CFG_ONENET_DEVICE_NAME  "your_device_name"
+#define CFG_ONENET_ACCESS_KEY   "your_access_key"

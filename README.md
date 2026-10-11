@@ -55,25 +55,29 @@ idf.py -p <串口> flash monitor    # Windows 下串口如 COM5
 
 ## 配置
 
-所有参数集中在 [components/app_config/app_config.h](components/app_config/app_config.h)：
+公共参数集中在 [components/app_config/app_config.h](components/app_config/app_config.h)：
 
 | 宏 | 说明 |
 |---|---|
-| `CFG_WIFI_SSID` / `CFG_WIFI_PASS` | Wi-Fi 名称与密码 |
 | `CFG_ONENET_URI` | OneNET MQTT 服务器地址 |
-| `CFG_ONENET_PRODUCT_ID` | OneNET 产品 ID |
-| `CFG_ONENET_DEVICE_NAME` | 设备名称 |
-| `CFG_ONENET_ACCESS_KEY` | 产品 accessKey |
 | `CFG_DS_TEMP` / `CFG_DS_HUMI` | 数据流名，须与平台侧一致 |
 | `CFG_SHT30_SDA` / `CFG_SHT30_SCL` / `CFG_SHT30_ADDR` | SHT30 引脚与地址 |
 | `CFG_TELEMETRY_PERIOD_MS` | 默认上报周期（ms） |
+
+**敏感信息**（Wi-Fi 账号、OneNET 产品 ID / 设备名 / accessKey）存放在 `app_config_private.h`，该文件被 `.gitignore` 忽略，**不会提交到仓库**。首次使用时：
+
+```bash
+cp components/app_config/app_config_private.h.example components/app_config/app_config_private.h
+```
+
+然后编辑 `app_config_private.h` 填入真实值。
 
 ## OneNET 平台侧配置
 
 1. 在 OneNET 控制台创建产品（接入协议：MQTT），记下 **产品 ID** 与 **accessKey**
 2. 创建设备，设备名与 `CFG_ONENET_DEVICE_NAME` 一致
 3. 创建数据流 `Temp`、`RH`，名称须与宏定义完全一致
-4. 将以上信息填入 `app_config.h`
+4. 将以上信息填入 `app_config_private.h`
 
 ## 云端命令
 
