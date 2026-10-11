@@ -1,0 +1,6 @@
+# Build directory
+build/
+
+# sdkconfig is generated from sdkconfig.defaults
+sdkconfig
+sdkconfig.old

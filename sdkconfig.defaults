@@ -1,0 +1,2 @@
+﻿# 事件循环任务栈加大：WiFi/MQTT 回调在系统事件任务里执行，默认 2KB 偏小
+CONFIG_ESP_SYSTEM_EVENT_TASK_STACK_SIZE=4096

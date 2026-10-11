@@ -1,0 +1,20 @@
+{
+  "python.analysis.stubPath": "C:\\Users\\Xiehui\\.kendryte\\k230_canmv_pylance\\4d41c8543b04cf94\\typings",
+  "idf.customExtraVars": {
+    "IDF_TARGET": "esp32s3"
+  },
+  "clangd.path": "C:\\Espressif\\tools\\esp-clang\\esp-19.1.2_20250312\\esp-clang\\bin\\clangd.exe",
+  "clangd.arguments": [
+    "--background-index",
+    "--query-driver=**",
+    "--compile-commands-dir=d:\\mcu_iot\\Project\\esp32_iot_node\\build"
+  ],
+  "idf.openOcdConfigs": [
+    "board/esp32c3-builtin.cfg"
+  ],
+  "idf.flashType": "UART",
+  "idf.portWin": "COM9",
+  "python.analysis.extraPaths": [
+    "C:\\Users\\Xiehui\\.kendryte\\k230_canmv_stubs\\d5141688f15a8df4c5e40d34bfc0bfece189c5b2"
+  ]
+}
